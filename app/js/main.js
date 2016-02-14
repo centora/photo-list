@@ -24,6 +24,7 @@ appPhotos.config(function($stateProvider, $urlRouterProvider) {
 });
 
 var root = 'http://jsonplaceholder.typicode.com';
+
 appPhotos.service("photoService", function($http, $q){
 	var deferred = $q.defer();
 	$http.get(root + '/photos').then(function(data){
@@ -32,20 +33,14 @@ appPhotos.service("photoService", function($http, $q){
 	this.getPhotos = function(){
 		return deferred.promise;
 	}
-	this.getPhotos = function(){
-		return deferred.promise;
-	}
 });
+
 appPhotos.controller("PhotoListController", function($scope, photoService){
 	$scope.allImages = "";
 	var promise = photoService.getPhotos();
 	promise.then(function(data){
 		$scope.allImages = data.data;
 	});
-});
-
-appPhotos.service("getAlbumListService", function(){
-
 });
 
 appPhotos.controller("AlbumController", function($scope, photoService, $state, $location){
@@ -59,20 +54,3 @@ appPhotos.controller("AlbumController", function($scope, photoService, $state, $
 		$scope.images = data.data;
 	});
 });
-
-appPhotos.service("getAlbumListService", function(){
-
-});
-/*
-
-appPhotos.controller("PhotoListController", function(){
-	console.log("photo list")
-});
-
-appPhotos.controller("AlbumController", function(){
-
-});
-
-appPhotos.controller("ImageController", function(){
-
-});*/
