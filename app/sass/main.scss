@@ -1,0 +1,33 @@
+body[ng-cloak] {
+	display:none;
+}
+
+/* Important to set height for column layout */
+.boxWithHeight {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.a, section {
+	border: 5px solid rgba(85, 97, 85, 0.27);
+	margin: 5px;
+}
+
+section {
+	background-color: #dedede;
+}
+
+.wrapper{
+	background-color: #FEEBC8;
+}
+.content{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.album-item{
+	/*display: inline-block;*/
+	font-size: 14px;
+}
+.album-item-title{
+	font-size: 14px;
+}

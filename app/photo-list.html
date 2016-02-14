@@ -1,0 +1,22 @@
+<md-content layout="row" layout-wrap layout-fill class="content">
+	<div ng-repeat="album in allImages | unique:'albumId'"
+	     class="album-item" flex="33">
+			<md-card>
+				<a ui-sref="album({ id : album.albumId })">
+					<img ng-src="{{album.thumbnailUrl}}" class="md-card-image" alt="Photo album - {{album.albumId}}}">
+				</a>
+				<md-card-content>
+					<h2 class="album-item-title">
+						<a ui-sref="album({ id : album.albumId })">
+							Photo album - {{album.albumId}}
+						</a>
+					</h2>
+				</md-card-content>
+			</md-card>
+		<!--<ul>
+			<li ng-repeat="photo in album">
+				<a ui-sref="album({ id : album.albumId })">{{photo.albumId}}</a>
+			</li>
+		</ul>-->
+	</div>
+</md-content>
