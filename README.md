@@ -1,8 +1,4 @@
-> Мой проект
-
-Как его установить?
-
-1. git clone https://github.com/centora/dz-port.git
+1. git clone https://github.com/centora/photo-list.git
 
 2. npm i
 
